@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONEO - My Page</title>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- Google Fonts: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wanted Sans CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+
+  <link rel="stylesheet" href="pageStyle.css">
+</head>
+<body>
+  <!-- 상단 메뉴바 (고정) -->
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.png" alt="ONEO 로고" class="logo-img">
+      </a>
+      <nav class="nav-menu">
+        <a href="brand.html" class="nav-item">brand</a>
+        <a href="store.html" class="nav-item">stores</a>
+        <a href="shop.html" class="nav-item">shop</a>
+        <a href="page.html" class="nav-item">mypage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-scroll" id="pageScroll">
+    <div class="mypage-container">
+
+      <!-- 상단 유저 배너 -->
+      <section class="user-banner">
+        <div class="user-banner-left">
+          <span class="member-grade">SILVER MEMBER</span>
+          <h1 class="user-welcome">WELCOME, ONEO USER</h1>
+        </div>
+        <div class="user-banner-right">
+          <button type="button" class="stat-item" data-tab-target="cart">
+            <span class="stat-label">Cart</span>
+            <span class="stat-value" id="header-cart-count">0</span>
+          </button>
+          <span class="stat-divider"></span>
+          <button type="button" class="stat-item" data-tab-target="orders">
+            <span class="stat-label">Orders</span>
+            <span class="stat-value" id="header-orders-count">0</span>
+          </button>
+          <span class="stat-divider"></span>
+          <button type="button" class="stat-item" data-tab-target="wishlist">
+            <span class="stat-label">Wishlist</span>
+            <span class="stat-value" id="header-wishlist-count">0</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 사이드바 + 패널 -->
+      <div class="mypage-content-layout">
+        <aside class="mypage-sidebar">
+          <button type="button" class="side-menu-item active" data-tab="cart">장바구니</button>
+          <button type="button" class="side-menu-item" data-tab="orders">배송현황</button>
+          <button type="button" class="side-menu-item" data-tab="wishlist">좋아요</button>
+          <button type="button" class="side-menu-item" data-tab="center">고객센터</button>
+        </aside>
+
+        <div class="mypage-main-panel">
+
+          <div class="panel-section active" id="panel-cart">
+            <div class="panel-header-title">Cart (<span id="cart-title-count">0</span>)</div>
+            <div class="cart-items-list" id="cart-items-container"></div>
+            <div class="cart-checkout-bar" id="checkout-bar">
+              <div class="total-amount-label">Total Amount</div>
+              <div class="total-amount-value" id="total-amount-value">KRW 0</div>
+              <button type="button" class="btn-checkout" id="checkoutBtn">CHECKOUT</button>
+            </div>
+          </div>
+
+          <div class="panel-section" id="panel-orders">
+            <div class="panel-header-title">Order &amp; Delivery Status</div>
+            <div class="cart-items-list" id="orders-container"></div>
+          </div>
+
+          <div class="panel-section" id="panel-wishlist">
+            <div class="panel-header-title">Wishlist (<span id="wishlist-title-count">0</span>)</div>
+            <div class="cart-items-list" id="wishlist-container"></div>
+          </div>
+
+          <div class="panel-section" id="panel-center">
+            <div class="panel-header-title">Customer Support</div>
+            <div class="faq-list">
+              <div class="faq-card">
+                <div class="faq-question">Q. 배송은 얼마나 걸리나요?</div>
+                <div class="faq-answer">평일 기준 오후 2시 이전 주문건은 당일 출고되며, 평균 1~2일 내에 수령하실 수 있습니다.</div>
+              </div>
+              <div class="faq-card">
+                <div class="faq-question">Q. 교환 및 반품 절차가 궁금합니다.</div>
+                <div class="faq-answer">제품 수령 후 7일 이내 고객센터 문의를 통해 접수가 가능합니다.</div>
+              </div>
+            </div>
+            <div class="cs-inquiry-footer">
+              <span class="cs-help-text">도움이 더 필요하신가요?</span>
+              <a href="mailto:helloOneo@gmail.com" class="cs-email-link">1:1 문의하기 (helloOneo@gmail.com)</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (홈 탭과 동일) -->
+    <footer id="pFooter" class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col footer-col-left" data-reveal>
+          <a href="mailto:helloOneo@gmail.com" class="footer-email">helloOneo@gmail.com</a>
+          <div class="footer-socials">
+            <a href="#ig" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#n" class="social-btn" aria-label="Naver">N</a>
+          </div>
+          <div class="footer-legal">
+            <p>2026 ONEO All rights reserved.</p>
+            <p><a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-middle" data-reveal data-delay="1">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="brand.html">brand</a></li>
+            <li><a href="store.html">stores</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="page.html">mypage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-right" data-reveal data-delay="2">
+          <h4 class="footer-office-title">ONEO office</h4>
+          <p class="footer-address">12, Seongsu-iro 8-gil,<br>Seongdong-gu, Seoul, Korea</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="pageScript.js" defer></script>
+</body>
+</html>

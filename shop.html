@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONEO - Shop</title>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- Google Fonts: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wanted Sans CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+
+  <link rel="stylesheet" href="shopStyle.css">
+</head>
+<body>
+  <!-- 상단 메뉴바 (고정) -->
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.png" alt="ONEO 로고" class="logo-img">
+      </a>
+      <nav class="nav-menu">
+        <a href="brand.html" class="nav-item">brand</a>
+        <a href="store.html" class="nav-item">stores</a>
+        <a href="shop.html" class="nav-item">shop</a>
+        <a href="page.html" class="nav-item">mypage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shop-scroll" id="shopScroll">
+    <div class="shop-page">
+      <div class="shop-container">
+        <!-- 카테고리 탭 + 타이틀 -->
+        <div class="shop-header">
+          <div class="category-tabs" id="categoryTabs">
+            <button class="tab-btn" data-category="all">All</button>
+            <button class="tab-btn active" data-category="protein">Protein</button>
+            <button class="tab-btn" data-category="flavor">Flavor</button>
+            <button class="tab-btn" data-category="topping">Topping</button>
+            <span class="tab-indicator" id="tabIndicator"></span>
+          </div>
+          <h2 class="shop-section-title"><span class="title-line"><span id="section-title">Protein</span></span></h2>
+        </div>
+
+        <!-- 상품 그리드 (Protein 6 / Flavor 3 / Topping 3 = All 12) -->
+        <div class="product-grid" id="product-grid">
+        <div class="product-card" data-category="protein" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/protein1.webp" alt="PROTEIN 15g" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PROTEIN 15g</h3>
+            <p class="product-desc">거부감 없는 목넘김과 가벼운 제형으로, 단백질 한 끗만 더하고 싶을 때 즐기는 라이트 포뮬러입니다.</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 3,500</span>
+              <span class="product-spec">1EA / 56kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="protein" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/protein2.webp" alt="PROTEIN 20g" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PROTEIN 20g</h3>
+            <p class="product-desc">한 끼 식사의 단백질을 온전히 채워주어, 아침 대용이나 가벼운 증진용으로 가장 추천하는 옵션입니다.</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 3,500</span>
+              <span class="product-spec">1EA / 68kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="protein" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/protein3.webp" alt="PROTEIN 25g" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PROTEIN 25g</h3>
+            <p class="product-desc">근육 합성과 피로 회복을 위해 유산소나 웨이트 운동 후 섭취하기 가장 적합한 고함량 부스터 스펙입니다.</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 3,500</span>
+              <span class="product-spec">1EA / 110kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="protein" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/protein4.webp" alt="PROTEIN 30g" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PROTEIN 30g</h3>
+            <p class="product-desc">땀 흘린 후 손실되기 쉬운 영양을 30g의 단백질로 빈틈없이 채워주어 효과적인 운동 결과를 선사합니다.</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 3,500</span>
+              <span class="product-spec">1EA / 131kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="protein" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/protein5.webp" alt="PROTEIN 35g" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PROTEIN 35g</h3>
+            <p class="product-desc">강도 높은 웨이트 트레이닝과 전문적인 퍼포먼스 향상을 위한 파워풀한 고단백 딥 포뮬러입니다.</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 3,800</span>
+              <span class="product-spec">1EA / 145kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="protein" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/protein6.webp" alt="PROTEIN 40g" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">PROTEIN 40g</h3>
+            <p class="product-desc">극한의 벌크업과 체계적인 영양 밀도 설계를 위해 엄선된 ONEO의 맥시멈 단백질 솔루션입니다.</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 4,000</span>
+              <span class="product-spec">1EA / 160kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="flavor" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/choco.webp" alt="CHOCOLATE" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CHOCOLATE</h3>
+            <p class="product-desc">깊고 진한 다크 초콜릿의 풍미</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 1,000</span>
+              <span class="product-spec">1EA / 45kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="flavor" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/matcha.webp" alt="MATCHA" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">MATCHA</h3>
+            <p class="product-desc">제주산 찻잎의 은은하고 부드러운 말차 맛</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 1,000</span>
+              <span class="product-spec">1EA / 40kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="flavor" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/grain.webp" alt="GRAIN" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">GRAIN</h3>
+            <p class="product-desc">고소하게 볶은 곡물의 구수한 풍미</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 1,000</span>
+              <span class="product-spec">1EA / 42kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="topping" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/granola.webp" alt="GRANOLA" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">GRANOLA</h3>
+            <p class="product-desc">바삭하게 구운 그래놀라의 고소한 식감</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 800</span>
+              <span class="product-spec">1EA / 35kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="topping" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/strawberry.webp" alt="DRIED STRAWBERRY" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">DRIED STRAWBERRY</h3>
+            <p class="product-desc">달콤새콤 건조 딸기의 쫀득한 식감</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 900</span>
+              <span class="product-spec">1EA / 45kcal</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card" data-category="topping" tabindex="0" role="link">
+          <div class="product-img-box">
+            <div class="img-clip"><img src="img/cacao.webp" alt="CACAONIBS" class="product-img" decoding="async"></div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">CACAONIBS</h3>
+            <p class="product-desc">오독오독 쌉싸름한 카카오닙스의 깊은 맛</p>
+            <div class="product-meta">
+              <span class="product-price">KRW 900</span>
+              <span class="product-spec">1EA / 38kcal</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (홈 탭과 동일) -->
+    <footer id="shopFooter" class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col footer-col-left" data-reveal>
+          <a href="mailto:helloOneo@gmail.com" class="footer-email">helloOneo@gmail.com</a>
+          <div class="footer-socials">
+            <a href="#ig" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#n" class="social-btn" aria-label="Naver">N</a>
+          </div>
+          <div class="footer-legal">
+            <p>2026 ONEO All rights reserved.</p>
+            <p><a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-middle" data-reveal data-delay="1">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="brand.html">brand</a></li>
+            <li><a href="store.html">stores</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="page.html">mypage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-right" data-reveal data-delay="2">
+          <h4 class="footer-office-title">ONEO office</h4>
+          <p class="footer-address">12, Seongsu-iro 8-gil,<br>Seongdong-gu, Seoul, Korea</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="shopScript.js" defer></script>
+</body>
+</html>

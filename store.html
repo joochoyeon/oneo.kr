@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONEO - Stores</title>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- Google Fonts: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wanted Sans CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+
+  <link rel="stylesheet" href="storeStyle.css">
+</head>
+<body>
+  <!-- 상단 메뉴바 (고정) -->
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.png" alt="ONEO 로고" class="logo-img">
+      </a>
+      <nav class="nav-menu">
+        <a href="brand.html" class="nav-item">brand</a>
+        <a href="store.html" class="nav-item">stores</a>
+        <a href="shop.html" class="nav-item">shop</a>
+        <a href="page.html" class="nav-item">mypage</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="store-scroll" id="storeScroll">
+    <section class="store-section" id="s1">
+      <div class="store-content">
+        <h2 class="store-title"><span class="title-line"><span>Seongsu</span></span></h2>
+        <div class="store-details">
+          <p class="store-address">
+            12, Seongsu-iro 8-gil, Seongdong-gu, Seoul, Korea
+            <a href="https://map.naver.com/p/search/12, Seongsu-iro 8-gil, Seongdong-gu, Seoul" target="_blank" rel="noopener" class="location-link">View Location <span class="loc-arrow">↗</span></a>
+          </p>
+          <p class="store-hours">MON-SUN 10am-10pm</p>
+        </div>
+        <figure class="store-photo">
+          <img src="img/offline_store1.webp" alt="성수 오프라인 스토어 전경" class="store-img is-current" decoding="async">
+          <img src="img/offline_store2.webp" alt="성수 오프라인 스토어 내부" class="store-img" decoding="async">
+        </figure>
+        <div class="slide-dots" aria-hidden="true"><span class="slide-dot is-active"></span><span class="slide-dot"></span></div>
+      </div>
+    </section>
+
+    <section class="store-section" id="s2">
+      <div class="store-content">
+        <h2 class="store-title"><span class="title-line"><span>Seocho</span></span></h2>
+        <div class="store-details">
+          <p class="store-address">
+            397, Seocho-daero, Seocho-gu, Seoul, South Korea
+            <a href="https://map.naver.com/p/search/397, Seocho-daero, Seocho-gu, Seoul" target="_blank" rel="noopener" class="location-link">View Location <span class="loc-arrow">↗</span></a>
+          </p>
+          <p class="store-hours">MON-SUN 10am-10pm</p>
+        </div>
+        <figure class="store-photo">
+          <img src="img/offline_store3.webp" alt="안국 오프라인 스토어 전경" class="store-img is-current" decoding="async">
+          <img src="img/offline_store4.webp" alt="안국 오프라인 스토어 내부" class="store-img" decoding="async">
+        </figure>
+        <div class="slide-dots" aria-hidden="true"><span class="slide-dot is-active"></span><span class="slide-dot"></span></div>
+      </div>
+    </section>
+
+    <!-- Footer (홈 탭과 동일) -->
+    <footer id="sFooter" class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col footer-col-left" data-reveal>
+          <a href="mailto:helloOneo@gmail.com" class="footer-email">helloOneo@gmail.com</a>
+          <div class="footer-socials">
+            <a href="#ig" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#n" class="social-btn" aria-label="Naver">N</a>
+          </div>
+          <div class="footer-legal">
+            <p>2026 ONEO All rights reserved.</p>
+            <p><a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-middle" data-reveal data-delay="1">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="brand.html">brand</a></li>
+            <li><a href="store.html">stores</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="page.html">mypage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-right" data-reveal data-delay="2">
+          <h4 class="footer-office-title">ONEO office</h4>
+          <p class="footer-address">12, Seongsu-iro 8-gil,<br>Seongdong-gu, Seoul, Korea</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="storeScript.js" defer></script>
+</body>
+</html>

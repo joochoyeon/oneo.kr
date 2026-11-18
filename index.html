@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONEO - A lifestyle I create</title>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- Google Fonts: Oswald & Caveat(필기체) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wanted Sans CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+
+  <link rel="stylesheet" href="myStyle.css">
+</head>
+<body>
+  <!-- 상단 메뉴바 (고정) -->
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a href="#sec1" class="logo-link">
+        <img decoding="async" src="img/logo.png" alt="ONEO 로고" class="logo-img">
+      </a>
+      <nav class="nav-menu">
+        <a href="brand.html" class="nav-item">brand</a>
+        <a href="store.html" class="nav-item">stores</a>
+        <a href="shop.html" class="nav-item">shop</a>
+        <a href="page.html" class="nav-item">mypage</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- [공유 레이어 1] 섹션 2 -> 섹션 3으로 위치 이동하는 단일 ONEO 로고 -->
+  <div id="sharedBrandLogo" class="shared-logo-layer">
+    <img decoding="async" src="img/logo_797979.png" alt="ONEO 심볼 로고" class="shared-brand-logo">
+  </div>
+
+  <!-- [공유 레이어 2] 섹션 4 -> 섹션 5로 위치 이동하는 단일 큰 문장 -->
+  <div id="sharedMainSlogan" class="shared-slogan-layer">
+    <div class="main-slogan-mask">
+      <h2 class="main-slogan-text">맞춤형 단백질 쉐이크로 건강한 하루를 시작하세요.</h2>
+    </div>
+  </div>
+
+
+
+  <!-- [공유 레이어 3] 섹션 5 갤러리: 섹션 6 으로 넘어갈 때 같은 이미지가 그대로 위로 올라가 상단에 걸쳐짐 -->
+  <div id="sharedMixGallery" class="shared-gallery-layer">
+    <div class="large-rolling-gallery" data-rolling="mix">
+            <img decoding="async" src="img/mix1.webp" alt="ONEO 재료 조합 1" class="rolling-img active">
+            <img decoding="async" src="img/mix2.webp" alt="ONEO 재료 조합 2" class="rolling-img">
+            <img decoding="async" src="img/mix3.webp" alt="ONEO 재료 조합 3" class="rolling-img">
+            <img decoding="async" src="img/mix4.webp" alt="ONEO 재료 조합 4" class="rolling-img">
+            <img decoding="async" src="img/mix5.webp" alt="ONEO 재료 조합 5" class="rolling-img">
+
+            <div class="gallery-center-overlay">
+              <p class="gallery-center-text">다양한 재료가 만나 완성되는 새로운 조합.</p>
+            </div>
+          </div>
+  </div>
+
+  <!-- 우측 섹션 진행 도트 (sec1~sec8) -->
+  <nav class="section-dots" aria-label="섹션 이동">
+    <button type="button" class="section-dot" data-index="0" aria-label="섹션 1로 이동"></button>
+    <button type="button" class="section-dot" data-index="1" aria-label="섹션 2로 이동"></button>
+    <button type="button" class="section-dot" data-index="2" aria-label="섹션 3로 이동"></button>
+    <button type="button" class="section-dot" data-index="3" aria-label="섹션 4로 이동"></button>
+    <button type="button" class="section-dot" data-index="4" aria-label="섹션 5로 이동"></button>
+    <button type="button" class="section-dot" data-index="5" aria-label="섹션 6로 이동"></button>
+    <button type="button" class="section-dot" data-index="6" aria-label="섹션 7로 이동"></button>
+    <button type="button" class="section-dot" data-index="7" aria-label="섹션 8로 이동"></button>
+  </nav>
+
+  <!-- 전체 스크롤 컨테이너 -->
+  <main class="scroll-container">
+    <!-- 섹션 1: 가루 인터랙션 메인 화면 -->
+    <section id="sec1" class="section hero-section">
+      <canvas id="powderCanvas"></canvas>
+    </section>
+
+    <!-- 섹션 2: ONEO 브랜드 심볼 하단 등장 화면 -->
+    <section id="sec2" class="section brand-intro-section"></section>
+
+    <!-- 섹션 3: 로고 상단 이동 + 점선 + 자동 롤링 이미지 & 브랜드 메시지 -->
+    <section id="sec3" class="section brand-story-section">
+      <div class="story-sequence">
+        <div class="logo-placeholder"></div>
+        <div class="story-dotted-line"></div>
+
+        <div class="story-content-wrap">
+          <div class="rolling-gallery" data-rolling="story">
+            <img decoding="async" src="img/slide1.webp" alt="ONEO 쉐이크 경험 1" class="rolling-img active">
+            <img decoding="async" src="img/slide2.webp" alt="ONEO 쉐이크 경험 2" class="rolling-img">
+            <img decoding="async" src="img/slide3.webp" alt="ONEO 쉐이크 경험 3" class="rolling-img">
+            <img decoding="async" src="img/slide4.webp" alt="ONEO 쉐이크 경험 4" class="rolling-img">
+          </div>
+          <p class="story-caption">
+            나의 목적과 취향에 맞춰 나만의 쉐이크를 완성하는 것,<br>
+            ONEO는 일상 속 건강한 선택을 만드는 새로운 경험을 제안합니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 4: 상단 카피 + 점선 드로잉 + 큰 메인 슬로건 (중앙 위치 트리거) -->
+    <section id="sec4" class="section brand-slogan-section">
+      <div class="slogan-sequence">
+        <p class="story-caption top-moved-caption">
+          나의 목적과 취향에 맞춰 나만의 쉐이크를 완성하는 것,<br>
+          ONEO는 일상 속 건강한 선택을 만드는 새로운 경험을 제안합니다.
+        </p>
+
+        <div class="slogan-dotted-line"></div>
+
+        <div class="slogan-center-placeholder"></div>
+      </div>
+    </section>
+
+    <!-- 섹션 5: 상단 점선 + 위로 올라간 큰 문장 + 확대된 자동 롤링 이미지 & 중앙 카피 -->
+    <section id="sec5" class="section brand-mix-section">
+      <div class="mix-sequence">
+        <div class="mix-top-dotted-line"></div>
+        <div class="slogan-top-placeholder"></div>
+      </div>
+    </section>
+
+    <!-- 섹션 6: 상단에 걸친 이미지 하단부 + 4개 브랜드 키워드 바운스 등장 -->
+    <section id="sec6" class="section brand-keywords-section">
+
+      <div class="keywords-stack">
+        <span class="keyword-pill">customize</span>
+        <span class="keyword-pill">everyday</span>
+        <span class="keyword-pill">lifestyle</span>
+        <span class="keyword-pill">healthy</span>
+      </div>
+    </section>
+
+    <!-- 섹션 7: 3D 카드 플립 설문지 + 체크 완료 시 상단 이동 & 주문하기 버튼 등장 -->
+    <section id="sec7" class="section survey-flip-section">
+      <div id="surveyStage" class="survey-stage">
+        <!-- 왼쪽 화살표 이미지 버튼 (뒤집혀 커진 후에만 보임 / 체크 완료 시 사라짐) -->
+        <button type="button" id="flipPrevBtn" class="flip-arrow-btn prev" aria-label="설문지 앞면으로 뒤집기">
+          <img decoding="async" src="img/leftArrow.png" alt="이전 화살표" class="arrow-img">
+        </button>
+
+        <!-- 중앙 설문지 + 하단 주문하기 버튼 컬럼 -->
+        <div class="survey-center-column">
+          <!-- 3D 플립 설문지 카드 -->
+          <div id="surveyCardScene" class="survey-card-scene">
+            <div id="surveyCard" class="survey-card">
+              <!-- 앞면 이미지 -->
+              <div class="survey-card-face survey-card-front">
+                <img decoding="async" src="img/survey.webp" alt="ONEO 맞춤형 설문지 앞면" class="survey-sheet-img">
+              </div>
+
+              <!-- 뒷면 이미지 + 체크 가능한 인터랙티브 오버레이 -->
+              <div class="survey-card-face survey-card-back">
+                <img decoding="async" src="img/1kit.webp" alt="ONEO 맞춤형 설문지 뒷면" class="survey-sheet-img">
+
+                <!-- 이미지 위 정확한 체크박스 & 필기체 출력 레이어 -->
+                <div class="survey-interactive-layer">
+                  <!-- 상단 계산된 단백질 표시 (g 앞자리) -->
+                  <span id="calcProteinDisplay" class="survey-protein-value">25</span>
+
+                  <!-- 오른쪽 네모칸 1: 맛 필기체 출력 영역 -->
+                  <div class="handwriting-box flavor-box">
+                    <span id="flavorHandwriting" class="handwriting-text"></span>
+                  </div>
+
+                  <!-- 오른쪽 네모칸 2: 토핑 필기체 출력 영역 -->
+                  <div class="handwriting-box topping-box">
+                    <span id="toppingHandwriting" class="handwriting-text"></span>
+                  </div>
+
+                  <!-- 1. 맛 선택 (단일 선택) -->
+                  <div class="check-group flavor-group">
+                    <button type="button" class="check-hotspot" data-group="flavor" data-value="곡물맛" data-script="grain" style="top: 32.8%; left: 5.8%;" aria-label="곡물맛 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="flavor" data-value="초코맛" data-script="choco" style="top: 36.2%; left: 5.8%;" aria-label="초코맛 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="flavor" data-value="녹차맛" data-script="green tea" style="top: 39.6%; left: 5.8%;" aria-label="녹차맛 선택"></button>
+                  </div>
+
+                  <!-- 2. 토핑 선택 (단일 선택) -->
+                  <div class="check-group topping-group">
+                    <button type="button" class="check-hotspot" data-group="topping" data-value="그래놀라" data-script="granola" style="top: 54.0%; left: 5.8%;" aria-label="그래놀라 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="topping" data-value="카카오닙스" data-script="cacao nibs" style="top: 57.6%; left: 5.8%;" aria-label="카카오닙스 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="topping" data-value="딸기" data-script="strawberry" style="top: 61.1%; left: 5.8%;" aria-label="딸기 선택"></button>
+                  </div>
+
+                  <!-- 3. 식사 여부 선택 (복수 선택 가능) -->
+                  <div class="check-group meal-group">
+                    <button type="button" class="check-hotspot" data-group="meals" data-value="아침" style="top: 75.6%; left: 5.8%;" aria-label="아침 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="meals" data-value="점심" style="top: 75.6%; left: 20.7%;" aria-label="점심 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="meals" data-value="저녁" style="top: 79.0%; left: 5.8%;" aria-label="저녁 선택"></button>
+                  </div>
+
+                  <!-- 4. 목적 선택 (단일 선택) -->
+                  <div class="check-group purpose-group">
+                    <button type="button" class="check-hotspot" data-group="purpose" data-value="식사" style="top: 75.6%; left: 50.0%;" aria-label="식사 목적 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="purpose" data-value="다이어트" style="top: 75.6%; left: 65.1%;" aria-label="다이어트 목적 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="purpose" data-value="운동" style="top: 79.0%; left: 50.0%;" aria-label="운동 목적 선택"></button>
+                    <button type="button" class="check-hotspot" data-group="purpose" data-value="시니어" style="top: 79.0%; left: 65.1%;" aria-label="시니어 목적 선택"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 모든 체크 완료 후 설문지가 위로 올라가면서 등장하는 주문하기 버튼 -->
+          <div class="order-action-wrap">
+            <button type="button" id="surveyOrderBtn" class="survey-order-btn">주문하기</button>
+          </div>
+        </div>
+
+        <!-- 오른쪽 화살표 이미지 버튼 (앞면일 때만 보임) -->
+        <button type="button" id="flipNextBtn" class="flip-arrow-btn next" aria-label="설문지 뒷면으로 뒤집기">
+          <img decoding="async" src="img/rightArrow.png" alt="다음 화살표" class="arrow-img">
+        </button>
+      </div>
+    </section>
+
+    <!-- 섹션 8: 가루 모이는 텍스트 + 스크롤에 따라 작아지는 패키지 + 마지막 로고 -->
+    <section id="sec8" class="section ending-powder-section">
+      <canvas id="endingPowderCanvas"></canvas>
+
+      <!-- 1. 가루가 모여 완성되는 타이포그래피 -->
+      <div class="ending-title-overlay">
+        <h2 id="endingSolidTitle" class="ending-solid-title">A lifestyle I create</h2>
+      </div>
+
+      <!-- 2. 스크롤에 따라 크기가 변하는 패키지 이미지 래퍼 -->
+      <div class="scroll-scaling-package" id="scalingPackage">
+        <div class="feathered-package-frame">
+          <img decoding="async" src="img/home_main.webp" alt="ONEO 패키지" class="package-img">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 섹션 8 바로 아래에 붙는 섹션 9 (마퀴 영역) -->
+    <section id="sec9" class="section products-marquee-section">
+      <div class="products-header" data-reveal-group>
+        <h2 class="products-title" data-reveal>Products</h2>
+        <p class="products-desc" data-reveal data-delay="1">오네오의 6가지 단백질과 맛, 토핑까지 한 번에 만나보세요.</p>
+        <a href="shop.html" class="shop-now-btn" data-reveal data-delay="2">shop now</a>
+      </div>
+
+      <div class="marquee-wrapper" data-reveal data-delay="2">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <div class="product-img-card"><img decoding="async" src="img/product1.webp" alt="Product 1" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product2.webp" alt="Product 2" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product3.webp" alt="Product 3" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product4.webp" alt="Product 4" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product5.webp" alt="Product 5" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product6.webp" alt="Product 6" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product7.webp" alt="Product 7" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product8.webp" alt="Product 8" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product9.webp" alt="Product 9" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product10.webp" alt="Product 10" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product11.webp" alt="Product 11" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product12.webp" alt="Product 12" class="prod-img"></div>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <div class="product-img-card"><img decoding="async" src="img/product1.webp" alt="Product 1" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product2.webp" alt="Product 2" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product3.webp" alt="Product 3" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product4.webp" alt="Product 4" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product5.webp" alt="Product 5" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product6.webp" alt="Product 6" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product7.webp" alt="Product 7" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product8.webp" alt="Product 8" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product9.webp" alt="Product 9" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product10.webp" alt="Product 10" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product11.webp" alt="Product 11" class="prod-img"></div>
+            <div class="product-img-card"><img decoding="async" src="img/product12.webp" alt="Product 12" class="prod-img"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 10: Offline Store 영역 (자동 롤링 슬라이더) -->
+    <section id="sec10" class="section offline-store-section">
+      <div class="offline-header">
+        <h2 class="offline-title" data-reveal>Offline Store</h2>
+        <p class="offline-desc" data-reveal data-delay="1">오네오의 제품을 직접 맛보고 경험할 수 있는 오프라인 공간을 소개합니다.</p>
+        <a href="store.html" class="location-btn" data-reveal data-delay="2">location</a>
+      </div>
+
+      <div class="offline-image-wrapper" data-reveal data-reveal-scale data-delay="2">
+        <div class="offline-slider">
+          <!-- 첫 번째 이미지 (기준 높이를 잡고 시작) -->
+          <img decoding="async" src="img/offline_store1.webp" alt="ONEO Offline Store 1" class="offline-slide active">
+          <!-- 두 번째 이미지 (자동 전환) -->
+          <img decoding="async" src="img/offline_store2.webp" alt="ONEO Offline Store 2" class="offline-slide">
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 11: Contact Us 영역 -->
+    <section id="sec11" class="section contact-section">
+      <div class="contact-container">
+        <!-- 왼쪽 텍스트 영역 -->
+        <div class="contact-info">
+          <h2 class="contact-title" data-reveal>Contact Us</h2>
+          <p class="contact-desc" data-reveal data-delay="1">오네오에 대한 문의나 제안이 있다면 언제든 연락해주세요.</p>
+          <a href="mailto:helloOneo@gmail.com" class="contact-btn" data-reveal data-delay="2">contact</a>
+        </div>
+
+        <!-- 오른쪽 노란색 그래픽 이미지 영역 -->
+        <div class="contact-graphic" data-reveal data-reveal-scale data-delay="1">
+          <!-- src 경로를 실제 이미지 파일명으로 맞춰주세요 -->
+          <img decoding="async" src="img/contactIcon.webp" alt="ONEO Contact Graphic" class="contact-shape-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 12: Footer 영역 -->
+    <footer id="sec12" class="site-footer">
+      <div class="footer-container">
+        <!-- 왼쪽 컬럼: 이메일, 소셜 아이콘, 저작권 및 약관 링크 -->
+        <div class="footer-col footer-col-left" data-reveal>
+          <a href="mailto:helloOneo@gmail.com" class="footer-email">helloOneo@gmail.com</a>
+          <div class="footer-socials">
+            <a href="#ig" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#n" class="social-btn" aria-label="Naver">N</a>
+          </div>
+          <div class="footer-legal">
+            <p>2026 ONEO All rights reserved.</p>
+            <p><a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+          </div>
+        </div>
+
+        <!-- 가운데 컬럼: 페이지 내비게이션 링크 -->
+        <div class="footer-col footer-col-middle" data-reveal data-delay="1">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="brand.html">brand</a></li>
+            <li><a href="store.html">stores</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="page.html">mypage</a></li>
+          </ul>
+        </div>
+
+        <!-- 오른쪽 컬럼: 오피스 주소 정보 -->
+        <div class="footer-col footer-col-right" data-reveal data-delay="2">
+          <h4 class="footer-office-title">ONEO office</h4>
+          <p class="footer-address">12, Seongsu-iro 8-gil,<br>Seongdong-gu, Seoul, Korea</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="myScript.js" defer></script>
+</body>
+</html>

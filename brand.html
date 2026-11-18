@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONEO - Brand</title>
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!-- Google Fonts: Oswald -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Wanted Sans CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
+
+  <link rel="stylesheet" href="brandStyle.css">
+</head>
+<body>
+  <!-- 상단 메뉴바 (고정) -->
+  <header class="gnb">
+    <div class="gnb-inner">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.png" alt="ONEO 로고" class="logo-img">
+      </a>
+      <nav class="nav-menu">
+        <a href="brand.html" class="nav-item">brand</a>
+        <a href="store.html" class="nav-item">stores</a>
+        <a href="shop.html" class="nav-item">shop</a>
+        <a href="page.html" class="nav-item">mypage</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 전체 스크롤 컨테이너 (섹션 단위로 한 장씩 이동) -->
+  <main class="brand-scroll" id="brandScroll">
+
+    <!-- 1. WHO WE ARE -->
+    <section class="brand-section brand-intro" id="b1">
+      <h2 class="brand-intro-label">WHO WE ARE</h2>
+      <div class="brand-intro-content">
+        <p class="brand-intro-highlight"><span>ONEO는 정형화된 일상 속 단백질 섭취의 지루함과 불편함에서 출발합니다.</span></p>
+        <p class="brand-intro-description">
+          우리는 개인마다 다른 신체 밸런스와 라이프스타일에 주목하여,
+          그 속에 숨겨진 영양 불균형 문제를 집요하고 세심한 관점으로 정의합니다.
+          ONEO는 단순한 제품을 넘어 나에게 딱 맞는 최적의 맞춤형 단백질 솔루션을
+          디자인하며, 더 나은 일상의 밸런스를 설계하는 파트너입니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. TAILORED NUTRITION, HIDDEN BALANCE. -->
+    <section class="brand-section brand-vision-section" id="b2">
+      <div class="brand-vision-inner">
+        <h2 class="vision-main-title">
+          <span class="title-line"><span>TAILORED NUTRITION,</span></span>
+          <span class="title-line"><span>HIDDEN BALANCE.</span></span>
+        </h2>
+
+        <div class="vision-grid">
+          <div class="vision-col vision-col-left">
+            <h3 class="vision-col-label">WHY WE START</h3>
+            <p class="vision-text">
+              단백질은 단순히 근육만을 위한 보충제가 아닙니다.<br>
+              일상의 지속 가능한 에너지를 채우는 삶의 기본 요소입니다.<br>
+              ONEO는 정형화된 제품 대신 개인의 신체 데이터와 라이프스타일에 맞춘<br>
+              커스텀 밸런스를 설계합니다. 단백질은 단순히 근육만을 위한 보충제가<br>
+              아닙니다. 일상의 지속 가능한 에너지를 채우는 삶의 기본 요소입니다.
+            </p>
+          </div>
+
+          <div class="vision-col vision-col-right">
+            <div class="vision-block">
+              <h3 class="vision-col-label">VISION</h3>
+              <p class="vision-text">개인의 라이프스타일에 맞춘 커스텀 영양 솔루션 브랜드</p>
+            </div>
+            <div class="vision-block">
+              <h3 class="vision-col-label">MISSION</h3>
+              <p class="vision-text">일상의 질을 높이는 세심한 단백질 섭취로 매일의 건강한 밸런스와 즐거움을 제공</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 다이어그램 -->
+    <section class="brand-section brand-diagram-section" id="b3">
+      <div class="diagram-stage">
+        <!-- Trend&Needs -->
+        <div class="bubble dark b-lg"  style="--i:0">개인 맞춤형 식단<br>프로세스</div>
+        <div class="bubble dark b-md1" style="--i:1">지루한 맛</div>
+        <div class="bubble dark b-dotA" style="--i:2"></div>
+        <div class="bubble dark b-emp"  style="--i:3"></div>
+        <div class="bubble dark b-md2" style="--i:4">정형화된<br>단백질</div>
+        <div class="bubble dark b-sm"  style="--i:5">영양 불균형</div>
+        <div class="bubble dark b-dotB" style="--i:6"></div>
+        <div class="bubble dark b-dotC" style="--i:7"></div>
+        <span class="diagram-label dl-1">Trend&amp;Needs</span>
+
+        <span class="diagram-line dline-1"></span>
+
+        <!-- Discomforts -->
+        <div class="bubble outline o-top" style="--i:8">나에게 맞는<br>수치 분석</div>
+        <div class="bubble outline o-bot" style="--i:9">취향 기반<br>커스터마이징</div>
+        <span class="diagram-label dl-2">Discomforts</span>
+
+        <span class="diagram-line dline-2"></span>
+
+        <!-- Brand -->
+        <div class="bubble yellow-brand" style="--i:10">
+          <img src="img/logo_797979.png" alt="ONEO 로고" class="brand-logo-img">
+        </div>
+        <span class="diagram-label dl-3">Brand</span>
+      </div>
+    </section>
+
+    <!-- 4. ONLINE STORE 배너 (누르면 shop 으로 이동) -->
+    <section class="brand-section brand-shop-banner-section" id="b4">
+      <a href="shop.html" class="shop-banner-box">
+        <span class="shop-banner-sub">ONLINE STORE</span>
+        <span class="shop-banner-main">Shop ONEO</span>
+        <span class="shop-banner-arrow">
+          <img src="img/rightArrow.png" alt="" class="shop-arrow-img">
+        </span>
+      </a>
+    </section>
+
+    <!-- Footer (홈 탭과 동일) -->
+    <footer id="bFooter" class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col footer-col-left" data-reveal>
+          <a href="mailto:helloOneo@gmail.com" class="footer-email">helloOneo@gmail.com</a>
+          <div class="footer-socials">
+            <a href="#ig" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#n" class="social-btn" aria-label="Naver">N</a>
+          </div>
+          <div class="footer-legal">
+            <p>2026 ONEO All rights reserved.</p>
+            <p><a href="#terms">Terms of Service</a> | <a href="#privacy">Privacy Policy</a></p>
+          </div>
+        </div>
+
+        <div class="footer-col footer-col-middle" data-reveal data-delay="1">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="brand.html">brand</a></li>
+            <li><a href="store.html">stores</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="page.html">mypage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-right" data-reveal data-delay="2">
+          <h4 class="footer-office-title">ONEO office</h4>
+          <p class="footer-address">12, Seongsu-iro 8-gil,<br>Seongdong-gu, Seoul, Korea</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="brandScript.js" defer></script>
+</body>
+</html>
